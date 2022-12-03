@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block login %}
+<div class="login-page">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" placeholder="Username"/>
+        <input type="password" placeholder="Password"/>
+        <input type="text" placeholder="Email"/>
+        <button>create</button>
+        <p class="message">Existing user? <a href="login.html">Sign In</a></p>
+      </form>
+
+      <form class="login-form" action="{{ url_for('login') }}" method="post">
+        <input type="text" placeholder="Username" name="username"/>
+        <input type="password" placeholder="Password" name="password"/>
+
+        <button>login</button>
+        <p class="message">haven't registered yet? <a href="signup.html">Create your account!</a></p>
+      </form>
+    </div>
+  </div>
+{% endblock %}
